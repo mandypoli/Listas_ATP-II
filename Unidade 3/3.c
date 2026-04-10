@@ -1,8 +1,15 @@
 #include <stdio.h>
 
-//Crie uma função que receba dois números e retorne a soma entre eles.
+// Crie uma função que receba dois números e retorne a soma entre eles.
 
-int main(){
+int soma(int a, int b)
+{
+    int resultado = a + b;
+    return resultado;
+}
+
+int main()
+{
     int num1, num2;
 
     printf("| Soma entre dois numeros |\n");
@@ -10,5 +17,5 @@ int main(){
     scanf("%d", &num1);
     printf("Insira o 2o numero: ");
     scanf("%d", &num2);
-    return printf("%d + %d = %d\n", num1, num2, num1+num2);
+    return printf("%d + %d = %d\n", num1, num2, soma(num1, num2));
 }
