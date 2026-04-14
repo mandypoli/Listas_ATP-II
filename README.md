@@ -1,6 +1,6 @@
 <div align="center">
   
-# ☁︎｡⋆｡ ﾟ☾🎀 Algoritmos e Técnicas de Programação II 🎀 ☾⋆｡☁︎⋆｡ﾟ
+# 🎀 Algoritmos e Técnicas de Programação II 🎀
 
 <img src="https://media1.tenor.com/m/w4odShJ4eXoAAAAd/cat-kedi.gif" width="120" alt="Pixel art fofa"/>
 
