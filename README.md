@@ -45,7 +45,7 @@ gcc 1.c -o programa
 # 3. Execute o código
 ./programa
 ```
-
+ 
 <div align="center">
 🌲 <i>Feito com dedicação,☕ e muito raciocínio lógico!</i> 🌲
 </div>

@@ -1,32 +1,40 @@
 #include <stdio.h>
 
-// Analise e explique (em comentário) o comportamento de um código onde múltiplas
-// funções alteram a mesma variável por referência.
+// Crie um conjunto de funções para: calcular soma, calcular média, calcular maior valor
+// E utilize todas em um programa principal.
 
-void subtrai(int *v)
+double calc_soma(double a, double b)
 {
-    *v -= 2;
+    return a + b;
 }
 
-void multiplica(int *v)
+double calc_media(double a, double b)
 {
-    *v *= 3;
+    return (a + b) / 2.0;
+}
+
+double calc_maior(double a, double b)
+{
+    if (a > b)
+    {
+        return a;
+    }
+    return b;
 }
 
 int main()
 {
-    int numero = 10;
+    double v1, v2;
 
-    subtrai(&numero);
-    multiplica(&numero);
+    printf("Valor 1: ");
+    scanf("%lf", &v1);
+    printf("Valor 2: ");
+    scanf("%lf", &v2);
 
-    printf("Resultado: %d\n", numero);
-
-    /* EXPLICACAO:
-       Como passamos o endereco de memoria (&numero) para as funcoes, elas nao
-       criam copias. Ambas acessam e modificam a exata mesma gaveta na memoria.
-       Logo, o 'numero' sofre as alteracoes em cascata (10 - 2 = 8; 8 * 3 = 24).
-    */
+    printf("\n--- Resultados ---\n");
+    printf("Soma: %.2lf\n", calc_soma(v1, v2));
+    printf("Media: %.2lf\n", calc_media(v1, v2));
+    printf("Maior valor: %.2lf\n", calc_maior(v1, v2));
 
     return 0;
 }

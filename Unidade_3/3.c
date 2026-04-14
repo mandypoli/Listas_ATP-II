@@ -1,19 +1,24 @@
 #include <stdio.h>
 
-// Reescreva o exercício anterior utilizando passagem por referência.
+// Crie uma função que receba dois números e retorne a soma entre eles.
 
-void altera_mesmo(int *num)
+int soma(int a, int b)
 {
-    *num = 999;
+    return a + b;
 }
 
 int main()
 {
-    int x = 10;
+    int num1, num2;
 
-    printf("Antes da funcao: %d\n", x);
-    altera_mesmo(&x);
-    printf("Depois da funcao: %d (agora mudou)\n", x);
+    printf("| Soma entre dois numeros |\n");
+    printf("Insira o 1o numero: ");
+    scanf("%d", &num1);
+    printf("Insira o 2o numero: ");
+    scanf("%d", &num2);
+
+    // O printf agora e uma chamada separada
+    printf("%d + %d = %d\n", num1, num2, soma(num1, num2));
 
     return 0;
 }

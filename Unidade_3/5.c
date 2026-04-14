@@ -1,19 +1,30 @@
 #include <stdio.h>
 
-// Desenvolva um algoritmo que demonstre o escopo de uma variável dentro de um bloco se.
+// Escreva uma função que receba três notas e retorne a média.
+
+double calcular_media(double numero[])
+{
+    double soma = 0.0;
+
+    for (int i = 0; i < 3; i++)
+    {
+        soma += numero[i];
+    }
+    // Calculo feito apenas uma vez ao final
+    return soma / 3.0;
+}
 
 int main()
 {
-    int a = 1;
+    double num[3];
 
-    if (a == 1)
+    printf("Insira as 3 notas:\n");
+    for (int i = 0; i < 3; i++)
     {
-        int b = 20; // Variável morre quando o if acaba
-        printf("Dentro do if: a=%d, b=%d\n", a, b);
+        scanf("%lf", &num[i]);
     }
 
-    // printf("%d", b); // Isso daria erro de compilacao se descomentado
-    printf("Fora do if conheco apenas a=%d\n", a);
+    printf("Media = %.2lf\n", calcular_media(num));
 
     return 0;
 }

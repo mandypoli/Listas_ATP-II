@@ -1,18 +1,25 @@
 #include <stdio.h>
 
-// Crie uma função que receba um número por valor e retorne seu triplo.
+// Crie um procedimento que receba a média de um aluno e informe se ele foi aprovado (media >= 6).
 
-int triplo(int n)
+void Verificacao(double Media)
 {
-    return n * 3;
+    if (Media >= 6.0)
+    {
+        printf("Aprovado\n");
+    }
+    else
+    {
+        printf("Reprovado\n");
+    }
 }
 
 int main()
 {
-    int val;
-    printf("Numero: ");
-    scanf("%d", &val);
+    double media;
+    printf("Digite a media: ");
+    scanf("%lf", &media);
+    Verificacao(media);
 
-    printf("O triplo eh %d\n", triplo(val));
     return 0;
 }

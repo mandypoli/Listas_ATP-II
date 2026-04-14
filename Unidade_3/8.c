@@ -1,26 +1,20 @@
 #include <stdio.h>
 
-// Escreva um algoritmo que mostre a diferença entre valor e referência utilizando dois procedimentos distintos.
+// Crie um algoritmo que utilize uma função para calcular o quadrado de um número e exiba o resultado.
 
-void adc_valor(int x)
+int calcular_quadrado(int n)
 {
-    x = x + 10;
-}
-
-void adc_referencia(int *x)
-{
-    *x = *x + 10;
+    return n * n;
 }
 
 int main()
 {
-    int v1 = 5, v2 = 5;
+    int numero;
+    printf("Insira um numero para ver seu quadrado: ");
+    scanf("%d", &numero);
 
-    adc_valor(v1);
-    adc_referencia(&v2);
-
-    printf("Passou por valor: %d\n", v1);
-    printf("Passou por ref: %d\n", v2);
+    int result = calcular_quadrado(numero);
+    printf("Quadrado de %d = %d\n", numero, result);
 
     return 0;
 }

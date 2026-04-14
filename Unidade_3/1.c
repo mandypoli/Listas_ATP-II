@@ -1,19 +1,14 @@
 #include <stdio.h>
 
-// Crie um algoritmo com uma variável global e uma local com o mesmo nome. Mostre os valores.
+// Crie um procedimento que exiba a mensagem: "Iniciando o sistema"
 
-int valor = 100; // global
-
-void testar_escopo()
+void mensagem()
 {
-    int valor = 50; // local
-    printf("Dentro da funcao (local): %d\n", valor);
+    printf("Iniciando o sistema\n");
 }
 
 int main()
 {
-    printf("Fora da funcao (global): %d\n", valor);
-    testar_escopo();
-
+    mensagem();
     return 0;
 }

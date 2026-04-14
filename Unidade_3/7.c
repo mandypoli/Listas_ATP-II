@@ -1,19 +1,30 @@
 #include <stdio.h>
 
-// Desenvolva um procedimento que incremente uma variável usando referência.
+// Desenvolva uma função que receba um número e retorne verdadeiro se for par e falso caso contrário.
 
-void incrementa(int *valor)
+int eh_par(int num)
 {
-    (*valor)++;
+    if (num % 2 == 0)
+    {
+        return 1; // Verdadeiro em C
+    }
+    return 0; // Falso
 }
 
 int main()
 {
-    int contador = 0;
+    int valor;
+    printf("Digite um numero: ");
+    scanf("%d", &valor);
 
-    incrementa(&contador);
-    incrementa(&contador);
+    if (eh_par(valor) == 1)
+    {
+        printf("O numero %d eh par\n", valor);
+    }
+    else
+    {
+        printf("O numero %d eh impar\n", valor);
+    }
 
-    printf("Valor final do contador: %d\n", contador);
     return 0;
 }

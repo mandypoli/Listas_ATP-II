@@ -1,21 +1,18 @@
 #include <stdio.h>
 
-// Crie um procedimento que receba dois números por referência e troque seus valores.
+// Desenvolva um procedimento que receba um nome e exiba: "Olá, [nome]"
 
-void trocar_valores(int *a, int *b)
+void mensagem(char nome[])
 {
-    int aux = *a;
-    *a = *b;
-    *b = aux;
+    printf("Ola %s\n", nome);
 }
 
 int main()
 {
-    int n1 = 5, n2 = 8;
-
-    printf("Antes: n1 = %d, n2 = %d\n", n1, n2);
-    trocar_valores(&n1, &n2);
-    printf("Depois: n1 = %d, n2 = %d\n", n1, n2);
-
+    char nome[15];
+    printf("Insira um nome: ");
+    // Em C, arrays de char ja funcionam como ponteiros no scanf
+    scanf("%s", nome);
+    mensagem(nome);
     return 0;
 }

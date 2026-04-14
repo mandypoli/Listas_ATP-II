@@ -1,19 +1,20 @@
 #include <stdio.h>
 
-// Desenvolva um procedimento que receba um número por valor e tente alterá-lo. Exiba antes e depois.
+// Desenvolva uma função que receba um número inteiro e retorne seu dobro.
 
-void tenta_alterar(int num)
+int dobro(int numero)
 {
-    num = 999;
+    return 2 * numero;
 }
 
 int main()
 {
-    int x = 10;
+    int num;
 
-    printf("Antes da funcao: %d\n", x);
-    tenta_alterar(x);
-    printf("Depois da funcao: %d (nao mudou)\n", x);
+    printf("| Dobro de um numero |\n");
+    printf("Insira um numero: ");
+    scanf("%d", &num);
+    printf("Dobro de %d = %d\n", num, dobro(num));
 
     return 0;
 }
